@@ -27,6 +27,7 @@ Build a website that will highlight my work experiences and portfolio.
 - 2026-08-24: Connected the second photography Instagram handle (`@pranavi.mov`); updated Photography Process to include CapCut, edits, and Canva while removing posters; linked the Her Campus author archive, Webbed Head, and Visual stories Substack pages. All Writing links open in a new tab.
 - 2026-08-24: Standardized visible casing for Visual Stories, Edits, and related process labels; renamed the Substack entry to "Writing, made personal"; added Reels and Short-form Content throughout Visual Stories and Photography.
 - 2026-08-24: Updated Akirah Label to Bangalore with both work periods (Jun 2025 to Aug 2025 and Apr 2026 to August 2026); added both periods to About; replaced the numbered Akirah deliverables with editable Sample Work image and video slots.
+- 2026-08-24: Removed Reels and Short-form Content from the Photography intro sentence while retaining them in the visual work labels and Process list.
 
 ## Prioritized backlog
 - P0: Swap in real profile and portfolio images once the user uploads them.
