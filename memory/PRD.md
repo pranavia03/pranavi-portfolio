@@ -34,9 +34,10 @@ Build a website that will highlight my work experiences and portfolio.
 - 2026-08-24: Replaced the Photography gallery's six category buttons with exactly three photo and two video placeholders; removed the Process gallery button while retaining the separate Process text row; added media-specific photo/video modal labels and a balanced mobile layout.
 - 2026-08-24: Renamed the Substack Writing entry to "For longer thoughts".
 - 2026-08-24: Updated the Home hero tagline beneath Pranavi's name to "Thoughtful work across marketing, branding and visual communication."
+- 2026-08-24: Replaced the Home portrait placeholder with the uploaded `IMG_9489.webp`, using a responsive editorial crop and accessible image description.
 
 ## Prioritized backlog
-- P0: Swap in the real profile image plus three Photography photos and two videos once the user uploads them.
+- P0: Swap in three Photography photos and two videos once the user uploads them.
 - P1: Replace Akirah Sample Work and other case-study placeholders with real images, reels, videos, copy, and outcomes.
 - P2: Add optional direct links to individual featured articles when selected.
 

@@ -3,6 +3,7 @@ export const INSTAGRAM = "https://www.instagram.com/pranavi.agarwal/";
 export const INSTAGRAM_2 = "https://www.instagram.com/pranavi.mov/";
 export const LINKEDIN = "https://www.linkedin.com/in/pranaviagarwal/";
 export const AKIRAH_INSTAGRAM = "https://www.instagram.com/akirah.label/";
+export const PORTRAIT_URL = "https://customer-assets-m6fa6gv7.emergentagent.net/job_exp-gallery-2/artifacts/go162ebk_IMG_9489.webp";
 export const RESUME_URL = "https://customer-assets-m6fa6gv7.emergentagent.net/job_exp-gallery-2/artifacts/ojniq3tn_Resume_Pranavi.pdf";
 
 export const photographyLabels = ["Photo 01", "Photo 02", "Photo 03", "Video 01", "Video 02"];
