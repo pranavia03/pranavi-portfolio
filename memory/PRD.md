@@ -6,7 +6,7 @@ Build a website that will highlight my work experiences and portfolio.
 ## Core requirements (static)
 - Premium, contemporary, editorial-style personal portfolio for Pranavi Agarwal.
 - Warm off-white/cream background, near-black text, deep cherry/oxblood accent. Editorial serif + clean sans-serif. No SaaS look, no gradients, no glassmorphism, no em dashes.
-- Sections: Home, Selected Work (Akirah Label, Vrijesh Overseas, Visual stories), Photography, Writing (Her Campus, Webbed Head, Substack), About, Résumé.
+- Sections: Home, Selected Work (Akirah Label, Vrijesh Overseas, Visual Stories), Photography, Writing (Her Campus, Webbed Head, Substack), About, Résumé.
 - Show, don't tell. Short, natural copy. High editability via reusable data components.
 
 ## User personas
@@ -25,10 +25,12 @@ Build a website that will highlight my work experiences and portfolio.
 - 2026-08-24: Renamed "Pranavi.mov" project to "Visual stories" (slug /work/visual-stories); removed "Marketing · Social" tags from Vrijesh Overseas (now "Photography · Content"); added Substack entry to Writing; Photography page renamed Experiments to Process, removed "sketches"/"visual studies" copy, added space for two Instagram handles (second is placeholder).
 - 2026-08-24: Swapped résumé link to updated Resume_Pranavi.pdf; Substack entry renamed to "Visual stories" and marked Ongoing; removed all marketing references from Vrijesh Overseas (intro, role, timeline, sections); added per-project `role` field in portfolioData.js used by case-study pages.
 - 2026-08-24: Connected the second photography Instagram handle (`@pranavi.mov`); updated Photography Process to include CapCut, edits, and Canva while removing posters; linked the Her Campus author archive, Webbed Head, and Visual stories Substack pages. All Writing links open in a new tab.
+- 2026-08-24: Standardized visible casing for Visual Stories, Edits, and related process labels; renamed the Substack entry to "Writing, made personal"; added Reels and Short-form Content throughout Visual Stories and Photography.
+- 2026-08-24: Updated Akirah Label to Bangalore with both work periods (Jun 2025 to Aug 2025 and Apr 2026 to August 2026); added both periods to About; replaced the numbered Akirah deliverables with editable Sample Work image and video slots.
 
 ## Prioritized backlog
 - P0: Swap in real profile and portfolio images once the user uploads them.
-- P1: Replace case-study placeholders with real campaign images, reels, copy, and outcomes.
+- P1: Replace Akirah Sample Work and other case-study placeholders with real images, reels, videos, copy, and outcomes.
 - P2: Add optional direct links to individual featured articles when selected.
 
 ## Next tasks
