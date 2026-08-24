@@ -1,51 +1,47 @@
 {
-  "app_name": "Editorial Minimalist Portfolio",
-  "app_type": "portfolio",
   "theme": "light",
-  "archetype": "LUXURY & EDITORIAL (Archetype 5 / Minimalist Swiss)",
+  "colors": {
+    "background": "var(--paper)",
+    "text": "var(--ink)",
+    "accent": "var(--cherry)",
+    "muted": "var(--muted)",
+    "instructions": "Maintain the existing CSS variables. Do not introduce generic SaaS blues or AI gradients. Stick to the editorial palette (Warm off-white, near-black, oxblood)."
+  },
   "typography": {
-    "heading_font": "Playfair Display",
-    "body_font": "Plus Jakarta Sans",
-    "mono_font": "JetBrains Mono",
-    "rules": {
-      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight font-serif",
-      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight font-serif",
-      "h3": "text-xl sm:text-2xl font-serif",
-      "body": "text-base leading-relaxed text-neutral-700",
-      "overline": "uppercase text-xs tracking-[0.25em] text-neutral-500 font-mono"
+    "headings": "Playfair Display (Serif), Plus Jakarta Sans (Sans-serif)",
+    "body": "DM Mono, Plus Jakarta Sans",
+    "instructions": "Keep existing typography. Ensure elegant editorial feel. No em dashes."
+  },
+  "layouts": {
+    "gallery_grid": {
+      "desktop": "4-column uniform editorial grid (Bento style). Item 1 spans 2 cols, Item 2 spans 1 col, Item 4 (portrait video) spans 1 col and 2 rows. Item 5 (landscape video) spans 2 cols on row 2, Item 3 spans 1 col on row 2. This perfectly places 5 mixed items into a flush 4x2 grid.",
+      "mobile": "Single column vertical stack. Each item gets a clean, slightly cropped editorial aspect ratio to avoid black bars while maintaining composition."
     }
   },
-  "colors": {
-    "background": "#FDFBF7",
-    "foreground": "#1A1A1A",
-    "primary": "#C5A880",
-    "primary_dark": "#9E825D",
-    "muted": "#F4EFE6",
-    "border": "#E5DEC9",
-    "card": "#FFFFFF",
-    "accent": "#2D3748"
+  "css_overrides": {
+    "file_target": "/app/frontend/src/App.css",
+    "instructions_to_main_agent": [
+      "1. Find the `.masonry` block in `App.css`.",
+      "2. Replace the `.masonry` grid definitions (including desktop and mobile media queries) with the new 'uniform editorial grid' CSS.",
+      "3. The desktop grid should be: \n```css\n.masonry {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  grid-auto-rows: clamp(220px, 22vw, 300px);\n  gap: 16px;\n  align-items: stretch;\n}\n.item-1 { grid-area: 1 / 1 / 2 / 3; }\n.item-2 { grid-area: 1 / 3 / 2 / 4; }\n.item-3 { grid-area: 2 / 3 / 3 / 4; }\n.item-4 { grid-area: 1 / 4 / 3 / 5; }\n.item-5 { grid-area: 2 / 1 / 3 / 3; }\n```",
+      "4. Make sure videos fill their frames completely without letterboxing. Ensure `video.gallery-media` uses `object-fit: cover !important` and remove any `object-fit: contain` rules.",
+      "5. For mobile, replace the max-width: 760px `.masonry` block with: \n```css\n@media (max-width: 760px) {\n  .masonry {\n    grid-template-columns: 1fr;\n    grid-auto-rows: auto;\n  }\n  .masonry-item { grid-area: auto !important; aspect-ratio: auto; }\n  .item-1 { aspect-ratio: 4/3; }\n  .item-2 { aspect-ratio: 4/5; }\n  .item-3 { aspect-ratio: 4/3; }\n  .item-4 { aspect-ratio: 4/5; }\n  .item-5 { aspect-ratio: 16/9; }\n}\n```",
+      "6. Do not modify the rest of the established portfolio design (header, footer, text styles, colors)."
+    ]
   },
   "components": {
-    "navigation": "Sticky glassmorphic editorial header with brand monogram, quick section anchors, resume download modal trigger, and live status badge.",
-    "hero": "Immersive editorial introduction with asymmetrical typography, tactile personal statement, profile photo showcase with grain overlay, and primary contact CTA.",
-    "about_skills": "Bento grid layout highlighting philosophy, core competencies, tools, awards, and interactive proficiency meter.",
-    "work_experience": "Chronological timeline of senior design and engineering roles with expandable details, key achievements, and client logos.",
-    "featured_projects": "Asymmetrical Tetris grid showcasing 6 top-tier portfolio projects with modal preview, live preview links, and filtering tabs.",
-    "interactive_sandbox": "Live interactive resume & portfolio customizer allowing visitors to toggle view modes, customize accent tones, and copy formatted markdown resume.",
-    "contact_section": "Dual-action contact hub featuring direct email copy, social media links with hover previews, and an interactive project inquiry form with validation."
+    "Photography": "Maintain existing markup in `/app/frontend/src/App.js`. The re-layout will be handled entirely via CSS Grid areas to visually reorder and shape the existing items into the editorial bento grid."
   },
-  "image_urls": {
-    "profile_photo": "https://images.unsplash.com/photo-1675111283112-b5b090fa3069?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwzfHxlZGl0b3JpYWwlMjBtaW5pbWFsaXN0JTIwZGVzaWduZXIlMjBwb3J0cmFpdHxlbnwwfHx8fDE3ODc1NDYzOTZ8MA&ixlib=rb-4.1.0&q=85",
-    "studio_workspace": "https://images.unsplash.com/photo-1587522384446-64daf3e2689a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwyfHxtaW5pbWFsaXN0JTIwc3R1ZGlvJTIwd29ya3NwYWNlJTIwZGVzaWdufGVufDB8fHx8MTc4NzU0NjM5Nnww&ixlib=rb-4.1.0&q=85",
-    "project_1": "https://images.unsplash.com/photo-1453586857165-eb78d44460ca?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwyfHxjcmVhdGl2ZSUyMGFyY2hpdGVjdHVyYWwlMjBwb3J0Zm9saW8lMjBzaG93Y2FzZXxlbnwwfHx8fDE3ODc1NDYzOTZ8MA&ixlib=rb-4.1.0&q=85",
-    "project_2": "https://images.unsplash.com/photo-1721815693498-cc28507c0ba2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwzfHxjcmVhdGl2ZSUyMGFyY2hpdGVjdHVyYWwlMjBwb3J0Zm9saW8lMjBzaG93Y2FzZXxlbnwwfHx8fDE3ODc1NDYzOTZ8MA&ixlib=rb-4.1.0&q=85",
-    "project_3": "https://images.unsplash.com/photo-1560131653-63257db002c8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMGFyY2hpdGVjdHVyYWwlMjBwb3J0Zm9saW8lMjBzaG93Y2FzZXxlbnwwfHx8fDE3ODc1NDYzOTZ8MA&ixlib=rb-4.1.0&q=85",
-    "project_4": "https://images.pexels.com/photos/5708521/pexels-photo-5708521.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  "media": {
+    "videos": "Must crop slightly to fill frames. Native controls should remain accessible, but visually the container must be completely filled. No black letterboxing."
   },
-  "universal_guidelines": [
-    "Always use data-testid attributes on all interactive and key informational elements.",
-    "Do not use transparent background on sticky headers without proper blur scrim.",
-    "Ensure high text contrast against background (APCA compliant).",
-    "Maintain generous spacing (2-3x normal scale) for luxury editorial whitespace."
+  "accessibility": {
+    "data-testid": "Ensure all interactive elements continue to have `data-testid` attributes."
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "No generic centered layouts, simplistic gradients, and uniform styling.",
+    "Do not apply `transition: all`. Target specific properties.",
+    "Do not center align the app container in root CSS.",
+    "Never use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons."
   ]
 }

@@ -39,6 +39,8 @@ Build a website that will highlight my work experiences and portfolio.
 - 2026-08-24: Enlarged both uploaded Home and About portraits while preserving responsive crops; updated the Home "A little context" paragraph with the user's exact final copy about psychology, marketing, visual communication, and audience response.
 - 2026-08-24: Completed the Photography gallery with three uploaded images and two playable videos; replaced the first video with `ScreenRecording_10-06-2024 15-12-32_1.mov`; rotated the second video 90 degrees counterclockwise. Both HEVC uploads were converted to optimized H.264 MP4 files for reliable browser playback.
 - 2026-08-24: Rearranged the Photography media grid around each video's native aspect ratio, using a portrait frame for Video 01 and a landscape frame for Video 02 to remove black letterboxing on desktop and mobile.
+- 2026-08-24: Rebuilt Photography as a tested uniform 4-column by 2-row editorial grid on desktop with a clean single-column mobile layout.
+- 2026-08-24: Simplified Vrijesh Overseas media sections to retain only Product Photography, removing Content Creation and Digital Assets slots.
 
 ## Prioritized backlog
 - P0: Replace remaining case-study placeholders with final assets once uploaded.

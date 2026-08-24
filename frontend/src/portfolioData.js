@@ -18,7 +18,7 @@ export const photographyProcess = ["Procreate", "Graphics", "Reels", "CapCut", "
 
 export const projects = [
   { slug: "akirah-label", number: "01", title: "Akirah Label", meta: "Social Media · Brand · Content", location: "Bangalore", periods: ["Jun 2025 – Aug 2025", "Apr 2026 – August 2026"], tone: "cherry", imageLabel: "AKIRAH / CAMPAIGN IMAGE", intro: "Brand and content work for a premium linen label across two work periods.", role: "Brand & Content / Social Media", sections: [], sampleWork: ["Images", "Videos"], link: AKIRAH_INSTAGRAM },
-  { slug: "vrijesh-overseas", number: "02", title: "Vrijesh Overseas", meta: "Photography · Content", location: "Bangalore · 2024", tone: "ink", imageLabel: "VRIJESH / PRODUCT IMAGE", intro: "Photography and content support for an overseas business.", role: "Photography / Content", sections: ["Content creation", "Product photography", "Digital assets"], link: null },
+  { slug: "vrijesh-overseas", number: "02", title: "Vrijesh Overseas", meta: "Photography · Content", location: "Bangalore · 2024", tone: "ink", imageLabel: "VRIJESH / PRODUCT IMAGE", intro: "Photography and content support for an overseas business.", role: "Photography / Content", sections: ["Product Photography"], link: null },
   { slug: "visual-stories", number: "03", title: "Visual Stories", meta: "Photography · Visual Work · Short-form Content", location: "Ongoing", tone: "lilac", imageLabel: "VISUAL STORIES / VISUAL STUDY", intro: "An ongoing visual practice across portrait, place, everyday details, and short-form content.", role: "Photography / Visual Work", sections: ["Portraits", "Street", "Travel", "Lifestyle", "Short-form Content"], link: INSTAGRAM },
 ];
 
