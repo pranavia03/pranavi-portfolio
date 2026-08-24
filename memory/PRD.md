@@ -36,6 +36,7 @@ Build a website that will highlight my work experiences and portfolio.
 - 2026-08-24: Updated the Home hero tagline beneath Pranavi's name to "Thoughtful work across marketing, branding and visual communication."
 - 2026-08-24: Replaced the Home portrait placeholder with the uploaded `IMG_9489.webp`, using a responsive editorial crop and accessible image description.
 - 2026-08-24: Replaced the About portrait placeholder with the uploaded `IMG_2385.webp`; updated only the Jun 2025 to Aug 2025 Akirah role to "Marketing and Content Intern" while preserving the Apr 2026 to August 2026 role.
+- 2026-08-24: Enlarged both uploaded Home and About portraits while preserving responsive crops; updated the Home "A little context" paragraph with the user's exact final copy about psychology, marketing, visual communication, and audience response.
 
 ## Prioritized backlog
 - P0: Swap in three Photography photos and two videos once the user uploads them.
