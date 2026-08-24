@@ -1,0 +1,51 @@
+{
+  "app_name": "Editorial Minimalist Portfolio",
+  "app_type": "portfolio",
+  "theme": "light",
+  "archetype": "LUXURY & EDITORIAL (Archetype 5 / Minimalist Swiss)",
+  "typography": {
+    "heading_font": "Playfair Display",
+    "body_font": "Plus Jakarta Sans",
+    "mono_font": "JetBrains Mono",
+    "rules": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight font-serif",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight font-serif",
+      "h3": "text-xl sm:text-2xl font-serif",
+      "body": "text-base leading-relaxed text-neutral-700",
+      "overline": "uppercase text-xs tracking-[0.25em] text-neutral-500 font-mono"
+    }
+  },
+  "colors": {
+    "background": "#FDFBF7",
+    "foreground": "#1A1A1A",
+    "primary": "#C5A880",
+    "primary_dark": "#9E825D",
+    "muted": "#F4EFE6",
+    "border": "#E5DEC9",
+    "card": "#FFFFFF",
+    "accent": "#2D3748"
+  },
+  "components": {
+    "navigation": "Sticky glassmorphic editorial header with brand monogram, quick section anchors, resume download modal trigger, and live status badge.",
+    "hero": "Immersive editorial introduction with asymmetrical typography, tactile personal statement, profile photo showcase with grain overlay, and primary contact CTA.",
+    "about_skills": "Bento grid layout highlighting philosophy, core competencies, tools, awards, and interactive proficiency meter.",
+    "work_experience": "Chronological timeline of senior design and engineering roles with expandable details, key achievements, and client logos.",
+    "featured_projects": "Asymmetrical Tetris grid showcasing 6 top-tier portfolio projects with modal preview, live preview links, and filtering tabs.",
+    "interactive_sandbox": "Live interactive resume & portfolio customizer allowing visitors to toggle view modes, customize accent tones, and copy formatted markdown resume.",
+    "contact_section": "Dual-action contact hub featuring direct email copy, social media links with hover previews, and an interactive project inquiry form with validation."
+  },
+  "image_urls": {
+    "profile_photo": "https://images.unsplash.com/photo-1675111283112-b5b090fa3069?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwzfHxlZGl0b3JpYWwlMjBtaW5pbWFsaXN0JTIwZGVzaWduZXIlMjBwb3J0cmFpdHxlbnwwfHx8fDE3ODc1NDYzOTZ8MA&ixlib=rb-4.1.0&q=85",
+    "studio_workspace": "https://images.unsplash.com/photo-1587522384446-64daf3e2689a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwyfHxtaW5pbWFsaXN0JTIwc3R1ZGlvJTIwd29ya3NwYWNlJTIwZGVzaWdufGVufDB8fHx8MTc4NzU0NjM5Nnww&ixlib=rb-4.1.0&q=85",
+    "project_1": "https://images.unsplash.com/photo-1453586857165-eb78d44460ca?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwyfHxjcmVhdGl2ZSUyMGFyY2hpdGVjdHVyYWwlMjBwb3J0Zm9saW8lMjBzaG93Y2FzZXxlbnwwfHx8fDE3ODc1NDYzOTZ8MA&ixlib=rb-4.1.0&q=85",
+    "project_2": "https://images.unsplash.com/photo-1721815693498-cc28507c0ba2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwzfHxjcmVhdGl2ZSUyMGFyY2hpdGVjdHVyYWwlMjBwb3J0Zm9saW8lMjBzaG93Y2FzZXxlbnwwfHx8fDE3ODc1NDYzOTZ8MA&ixlib=rb-4.1.0&q=85",
+    "project_3": "https://images.unsplash.com/photo-1560131653-63257db002c8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMGFyY2hpdGVjdHVyYWwlMjBwb3J0Zm9saW8lMjBzaG93Y2FzZXxlbnwwfHx8fDE3ODc1NDYzOTZ8MA&ixlib=rb-4.1.0&q=85",
+    "project_4": "https://images.pexels.com/photos/5708521/pexels-photo-5708521.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  },
+  "universal_guidelines": [
+    "Always use data-testid attributes on all interactive and key informational elements.",
+    "Do not use transparent background on sticky headers without proper blur scrim.",
+    "Ensure high text contrast against background (APCA compliant).",
+    "Maintain generous spacing (2-3x normal scale) for luxury editorial whitespace."
+  ]
+}
