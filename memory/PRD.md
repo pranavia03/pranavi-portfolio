@@ -42,9 +42,10 @@ Build a website that will highlight my work experiences and portfolio.
 - 2026-08-24: Rebuilt Photography as a tested uniform 4-column by 2-row editorial grid on desktop with a clean single-column mobile layout.
 - 2026-08-24: Simplified Vrijesh Overseas media sections to retain only Product Photography, removing Content Creation and Digital Assets slots.
 - 2026-08-24: Integrated the complete Photography gallery into the Home project's Visual Stories route (`/work/visual-stories`); removed Photography from desktop and mobile navigation; retained `/photography` as a redirect for old links. Full frontend regression passed in iteration 8.
+- 2026-08-24: Added four real Vrijesh Overseas product images: blue bedding as the Home project thumbnail, neutral striped bedding as the full case-study hero, and two portrait detail images under Product Photography. Removed the Vrijesh "View related work" link and replaced placeholder body copy with final product-photography context.
 
 ## Prioritized backlog
-- P0: Replace remaining case-study placeholders with final assets once uploaded.
+- P0: Replace remaining Akirah and other case-study placeholders with final assets once uploaded.
 - P1: Replace Akirah Sample Work and other case-study placeholders with real images, reels, videos, copy, and outcomes.
 - P2: Add optional direct links to individual featured articles when selected.
 - P2: Consolidate historical duplicate `.masonry` declarations in `App.css` to reduce future styling regression risk.
