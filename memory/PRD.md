@@ -24,12 +24,13 @@ Build a website that will highlight my work experiences and portfolio.
 - 2026-08: Removed Aari Label; purged em dashes; route fallbacks for deprecated URLs; 6 regression test iterations passed.
 - 2026-08-24: Renamed "Pranavi.mov" project to "Visual stories" (slug /work/visual-stories); removed "Marketing · Social" tags from Vrijesh Overseas (now "Photography · Content"); added Substack entry to Writing; Photography page renamed Experiments to Process, removed "sketches"/"visual studies" copy, added space for two Instagram handles (second is placeholder).
 - 2026-08-24: Swapped résumé link to updated Resume_Pranavi.pdf; Substack entry renamed to "Visual stories" and marked Ongoing; removed all marketing references from Vrijesh Overseas (intro, role, timeline, sections); added per-project `role` field in portfolioData.js used by case-study pages.
+- 2026-08-24: Connected the second photography Instagram handle (`@pranavi.mov`); updated Photography Process to include CapCut, edits, and Canva while removing posters; linked the Her Campus author archive, Webbed Head, and Visual stories Substack pages. All Writing links open in a new tab.
 
 ## Prioritized backlog
-- P0: Swap in real profile photo, portfolio images, and second Instagram handle once the user uploads them.
+- P0: Swap in real profile and portfolio images once the user uploads them.
 - P1: Replace case-study placeholders with real campaign images, reels, copy, and outcomes.
-- P2: Link real article URLs for Her Campus, Webbed Head, Substack.
+- P2: Add optional direct links to individual featured articles when selected.
 
 ## Next tasks
-- Ask the user to upload their profile and portfolio images plus the second Instagram handle.
+- Ask the user to upload their profile and portfolio images.
 - Replace placeholders across hero, About portrait, masonry, and case studies with supplied assets.
