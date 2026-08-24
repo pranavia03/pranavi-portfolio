@@ -4,6 +4,7 @@ export const INSTAGRAM_2 = "https://www.instagram.com/pranavi.mov/";
 export const LINKEDIN = "https://www.linkedin.com/in/pranaviagarwal/";
 export const AKIRAH_INSTAGRAM = "https://www.instagram.com/akirah.label/";
 export const PORTRAIT_URL = "https://customer-assets-m6fa6gv7.emergentagent.net/job_exp-gallery-2/artifacts/go162ebk_IMG_9489.webp";
+export const ABOUT_PORTRAIT_URL = "https://customer-assets-m6fa6gv7.emergentagent.net/job_exp-gallery-2/artifacts/bsf0xev2_IMG_2385.webp";
 export const RESUME_URL = "https://customer-assets-m6fa6gv7.emergentagent.net/job_exp-gallery-2/artifacts/ojniq3tn_Resume_Pranavi.pdf";
 
 export const photographyLabels = ["Photo 01", "Photo 02", "Photo 03", "Video 01", "Video 02"];
@@ -16,7 +17,7 @@ export const projects = [
 ];
 
 export const experience = [
-  ["Apr 2026 – August 2026", "Akirah Label", "Brand & Content / Social Media"], ["Jun 2025 – Aug 2025", "Akirah Label", "Brand & Content / Social Media"], ["2024", "Vrijesh Overseas Pvt. Ltd.", "Photography & Content"], ["Ongoing", "Her Campus - Writer", "Lifestyle · Fashion · Campus Life"], ["Ongoing", "Freelance - Photography & Visual Content", "Photography · Video · Digital Work"],
+  ["Apr 2026 – August 2026", "Akirah Label", "Brand & Content / Social Media"], ["Jun 2025 – Aug 2025", "Akirah Label", "Marketing and Content Intern"], ["2024", "Vrijesh Overseas Pvt. Ltd.", "Photography & Content"], ["Ongoing", "Her Campus - Writer", "Lifestyle · Fashion · Campus Life"], ["Ongoing", "Freelance - Photography & Visual Content", "Photography · Video · Digital Work"],
 ];
 
 export const articles = [

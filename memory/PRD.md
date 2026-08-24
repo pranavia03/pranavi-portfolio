@@ -35,6 +35,7 @@ Build a website that will highlight my work experiences and portfolio.
 - 2026-08-24: Renamed the Substack Writing entry to "For longer thoughts".
 - 2026-08-24: Updated the Home hero tagline beneath Pranavi's name to "Thoughtful work across marketing, branding and visual communication."
 - 2026-08-24: Replaced the Home portrait placeholder with the uploaded `IMG_9489.webp`, using a responsive editorial crop and accessible image description.
+- 2026-08-24: Replaced the About portrait placeholder with the uploaded `IMG_2385.webp`; updated only the Jun 2025 to Aug 2025 Akirah role to "Marketing and Content Intern" while preserving the Apr 2026 to August 2026 role.
 
 ## Prioritized backlog
 - P0: Swap in three Photography photos and two videos once the user uploads them.
@@ -42,5 +43,5 @@ Build a website that will highlight my work experiences and portfolio.
 - P2: Add optional direct links to individual featured articles when selected.
 
 ## Next tasks
-- Ask the user to upload their profile and portfolio images.
-- Replace placeholders across hero, About portrait, masonry, and case studies with supplied assets.
+- Ask the user to upload three Photography photos, two videos, and final case-study assets.
+- Replace Photography and case-study placeholders with supplied assets.
