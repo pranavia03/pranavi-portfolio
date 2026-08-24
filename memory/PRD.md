@@ -3,28 +3,33 @@
 ## Original problem statement
 Build a website that will highlight my work experiences and portfolio.
 
+## Core requirements (static)
+- Premium, contemporary, editorial-style personal portfolio for Pranavi Agarwal.
+- Warm off-white/cream background, near-black text, deep cherry/oxblood accent. Editorial serif + clean sans-serif. No SaaS look, no gradients, no glassmorphism, no em dashes.
+- Sections: Home, Selected Work (Akirah Label, Vrijesh Overseas, Visual stories), Photography, Writing (Her Campus, Webbed Head, Substack), About, Résumé.
+- Show, don't tell. Short, natural copy. High editability via reusable data components.
+
+## User personas
+- Pranavi Agarwal: psychology student (UMass Amherst) working across marketing, social media, brand marketing, photography, and visual content.
+- Visitors: recruiters, brands, collaborators browsing work, photography, and writing.
+
 ## Architecture decisions
-- React portfolio with reusable structured data and route-based pages for work, case studies, photography, writing, About, and résumé.
-- Editorial visual system based on Playfair Display, Plus Jakarta Sans, and DM Mono with cream, ink, and deep cherry palette.
-- All project, experience, writing, capability, social, email, and résumé content is centralized in `portfolioData.js`.
-- Existing FastAPI/MongoDB starter remains available; the portfolio currently needs no product data API.
+- React portfolio with route-based pages for work, case studies, photography, writing, About, and résumé.
+- Editorial visual system: Playfair Display, Plus Jakarta Sans, DM Mono; cream, ink, deep cherry palette.
+- All content centralized in `/app/frontend/src/portfolioData.js` for easy swapping of placeholders with real assets.
+- Existing FastAPI/MongoDB starter retained (healthcheck at /api/status); no product data API needed.
 
 ## Implemented
-- Premium editorial header with responsive mobile navigation.
-- Hero introduction with profile portrait, Amherst/Bangalore context, and work CTA.
-- About/skills section, work experience timeline, selected work grid, and contact hub.
-- Resume PDF link, exact Akirah Label and Pranavi Agarwal Instagram links, UMass email link, copy-email action with permission-safe fallback, and back-to-top link.
-- Route-based project case studies for Akirah Label, Aari Label, Vrijesh Overseas, and Pranavi.mov.
-- Photography masonry with clickable, closable placeholder lightbox; writing archive; About timeline/capabilities; résumé page with view/download actions.
-- SEO metadata updated to the requested portfolio title and description.
-- Responsive desktop/mobile layouts with image treatments, hover motion, and descriptive test IDs.
+- 2026-08: Editorial header with responsive mobile nav; hero; selected work index; case-study routes; photography masonry with lightbox; writing archive; About timeline/capabilities; résumé page linking uploaded PDF.
+- 2026-08: Removed Aari Label; purged em dashes; route fallbacks for deprecated URLs; 6 regression test iterations passed.
+- 2026-08-24: Renamed "Pranavi.mov" project to "Visual stories" (slug /work/visual-stories); removed "Marketing · Social" tags from Vrijesh Overseas (now "Photography · Content"); added Substack entry to Writing; Photography page renamed Experiments to Process, removed "sketches"/"visual studies" copy, added space for two Instagram handles (second is placeholder).
+- 2026-08-24: Swapped résumé link to updated Resume_Pranavi.pdf; Substack entry renamed to "Visual stories" and marked Ongoing; removed all marketing references from Vrijesh Overseas (intro, role, timeline, sections); added per-project `role` field in portfolioData.js used by case-study pages.
 
 ## Prioritized backlog
-- P0: Replace the current editorial placeholder portrait with Pranavi’s supplied profile photo when available.
-- P1: Replace case-study placeholders with real campaign images, reels, copy, calendars, screenshots, and outcomes.
-- P2: Add a lightweight inquiry form and editable content management flow.
+- P0: Swap in real profile photo, portfolio images, and second Instagram handle once the user uploads them.
+- P1: Replace case-study placeholders with real campaign images, reels, copy, and outcomes.
+- P2: Link real article URLs for Her Campus, Webbed Head, Substack.
 
 ## Next tasks
-- Gather the user’s project screenshots, reels, and preferred LinkedIn/blog URLs if they want them added.
-- Replace the current portrait placeholder with a supplied profile image.
-- Tune project case-study descriptions and outcomes for the user’s target marketing roles.
+- Ask the user to upload their profile and portfolio images plus the second Instagram handle.
+- Replace placeholders across hero, About portrait, masonry, and case studies with supplied assets.
