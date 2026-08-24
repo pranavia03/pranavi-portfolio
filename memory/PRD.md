@@ -38,6 +38,7 @@ Build a website that will highlight my work experiences and portfolio.
 - 2026-08-24: Replaced the About portrait placeholder with the uploaded `IMG_2385.webp`; updated only the Jun 2025 to Aug 2025 Akirah role to "Marketing and Content Intern" while preserving the Apr 2026 to August 2026 role.
 - 2026-08-24: Enlarged both uploaded Home and About portraits while preserving responsive crops; updated the Home "A little context" paragraph with the user's exact final copy about psychology, marketing, visual communication, and audience response.
 - 2026-08-24: Completed the Photography gallery with three uploaded images and two playable videos; replaced the first video with `ScreenRecording_10-06-2024 15-12-32_1.mov`; rotated the second video 90 degrees counterclockwise. Both HEVC uploads were converted to optimized H.264 MP4 files for reliable browser playback.
+- 2026-08-24: Rearranged the Photography media grid around each video's native aspect ratio, using a portrait frame for Video 01 and a landscape frame for Video 02 to remove black letterboxing on desktop and mobile.
 
 ## Prioritized backlog
 - P0: Replace remaining case-study placeholders with final assets once uploaded.
