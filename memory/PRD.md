@@ -45,6 +45,7 @@ Build a website that will highlight my work experiences and portfolio.
 - 2026-08-24: Added four real Vrijesh Overseas product images: blue bedding as the Home project thumbnail, neutral striped bedding as the full case-study hero, and two portrait detail images under Product Photography. Removed the Vrijesh "View related work" link and replaced placeholder body copy with final product-photography context.
 - 2026-08-24: Replaced the Home Visual Stories placeholder with the uploaded lion image and applied a subtle centered zoom for a stronger thumbnail crop.
 - 2026-08-24: Removed all typography overlays from the uploaded Akirah linen-shirt photograph while preserving the garment, embroidery, clothespins, clothesline, and sky; added the cleaned image as the Akirah Home thumbnail with a focused crop.
+- 2026-08-24: Renamed the Akirah case-study link from "View related work" to "Akirah Instagram" and increased it to 15px on desktop and 14px on mobile for clearer visibility; retained the direct `@akirah.label` destination.
 
 ## Prioritized backlog
 - P0: Replace remaining Akirah and other case-study placeholders with final assets once uploaded.

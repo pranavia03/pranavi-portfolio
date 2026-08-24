@@ -10,3 +10,5 @@
 @media(max-width:760px){.case-hero.has-image{aspect-ratio:3/2}.product-gallery{grid-template-columns:1fr;gap:12px}.product-image{aspect-ratio:4/5}}
 .project-thumbnail.lion-thumbnail{object-position:50% 46%;transform:scale(1.14)}.project-row:hover .project-thumbnail.lion-thumbnail{transform:scale(1.18)}
 .project-thumbnail.akirah-thumbnail{object-position:50% 43%}
+.case-external-link{font-size:15px;font-weight:600;letter-spacing:.08em;padding-bottom:8px;width:max-content}
+@media(max-width:760px){.case-external-link{font-size:14px}}
