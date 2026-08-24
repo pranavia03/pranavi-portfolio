@@ -31,9 +31,11 @@ Build a website that will highlight my work experiences and portfolio.
 - 2026-08-24: Finalized Photography wording with Short-form Content in the intro and removed it from the Process paragraph; removed all visible references to culture from Home and About.
 - 2026-08-24: Lightened the global background to near-white cream (`#fffdf7`) across the body and shared paper token.
 - 2026-08-24: Connected Pranavi's LinkedIn profile and corrected the footer Instagram label/link to `@pranavi.agarwal`.
+- 2026-08-24: Replaced the Photography gallery's six category buttons with exactly three photo and two video placeholders; removed the Process gallery button while retaining the separate Process text row; added media-specific photo/video modal labels and a balanced mobile layout.
+- 2026-08-24: Renamed the Substack Writing entry to "For longer thoughts".
 
 ## Prioritized backlog
-- P0: Swap in real profile and portfolio images once the user uploads them.
+- P0: Swap in the real profile image plus three Photography photos and two videos once the user uploads them.
 - P1: Replace Akirah Sample Work and other case-study placeholders with real images, reels, videos, copy, and outcomes.
 - P2: Add optional direct links to individual featured articles when selected.
 
