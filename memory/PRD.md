@@ -33,6 +33,7 @@ Build a website that will highlight my work experiences and portfolio.
 - 2026-08-24: Connected Pranavi's LinkedIn profile and corrected the footer Instagram label/link to `@pranavi.agarwal`.
 - 2026-08-24: Replaced the Photography gallery's six category buttons with exactly three photo and two video placeholders; removed the Process gallery button while retaining the separate Process text row; added media-specific photo/video modal labels and a balanced mobile layout.
 - 2026-08-24: Renamed the Substack Writing entry to "For longer thoughts".
+- 2026-08-24: Updated the Home hero tagline beneath Pranavi's name to "Thoughtful work across marketing, branding and visual communication."
 
 ## Prioritized backlog
 - P0: Swap in the real profile image plus three Photography photos and two videos once the user uploads them.
