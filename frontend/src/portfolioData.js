@@ -7,7 +7,13 @@ export const PORTRAIT_URL = "https://customer-assets-m6fa6gv7.emergentagent.net/
 export const ABOUT_PORTRAIT_URL = "https://customer-assets-m6fa6gv7.emergentagent.net/job_exp-gallery-2/artifacts/bsf0xev2_IMG_2385.webp";
 export const RESUME_URL = "https://customer-assets-m6fa6gv7.emergentagent.net/job_exp-gallery-2/artifacts/ojniq3tn_Resume_Pranavi.pdf";
 
-export const photographyLabels = ["Photo 01", "Photo 02", "Photo 03", "Video 01", "Video 02"];
+export const photographyItems = [
+  { type: "image", label: "Peacock", src: "https://customer-assets-m6fa6gv7.emergentagent.net/job_exp-gallery-2/artifacts/59zpf2z7_IMG_3262%202.jpg", alt: "Peacock displaying its feathers" },
+  { type: "image", label: "Street Portrait", src: "https://customer-assets-m6fa6gv7.emergentagent.net/job_exp-gallery-2/artifacts/38xvlzcd_3BADC4F6-61D4-4ED0-9582-DBB7FFAB9526_1_102_a.webp", alt: "Black-and-white street portrait of a man resting among bundled packages" },
+  { type: "image", label: "Mountain Landscape", src: "https://customer-assets-m6fa6gv7.emergentagent.net/job_exp-gallery-2/artifacts/3uf76e8m_IMG_2734.webp", alt: "Layered mountain landscape at dusk" },
+  { type: "video", label: "Video 01", src: "https://customer-assets-m6fa6gv7.emergentagent.net/job_exp-gallery-2/artifacts/l5d940vw_855ad4b74fa848b2b52c97b69035d4d9.MP4" },
+  { type: "video", label: "Video 02", src: "https://customer-assets-m6fa6gv7.emergentagent.net/job_exp-gallery-2/artifacts/vn0mrczm_89F1A6A0-8186-475B-8167-1C60B074DB0E.MP4" },
+];
 export const photographyProcess = ["Procreate", "Graphics", "Reels", "CapCut", "Edits", "Canva", "Moodboards"];
 
 export const projects = [
