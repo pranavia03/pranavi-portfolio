@@ -1,11 +1,12 @@
 export const EMAIL = "pranavia0305@gmail.com";
 export const INSTAGRAM = "https://www.instagram.com/pranavi.agarwal/";
 export const INSTAGRAM_2 = "https://www.instagram.com/pranavi.mov/";
+export const LINKEDIN = "https://www.linkedin.com/in/pranaviagarwal/";
 export const AKIRAH_INSTAGRAM = "https://www.instagram.com/akirah.label/";
 export const RESUME_URL = "https://customer-assets-m6fa6gv7.emergentagent.net/job_exp-gallery-2/artifacts/ojniq3tn_Resume_Pranavi.pdf";
 
 export const photographyLabels = ["PORTRAIT PHOTOGRAPHY", "STREET STUDY", "TRAVEL / PLACE", "LIFESTYLE FRAME", "SHORT-FORM CONTENT", "PROCESS"];
-export const photographyProcess = ["Procreate", "Graphics", "Reels", "Short-form Content", "CapCut", "Edits", "Canva", "Moodboards"];
+export const photographyProcess = ["Procreate", "Graphics", "Reels", "CapCut", "Edits", "Canva", "Moodboards"];
 
 export const projects = [
   { slug: "akirah-label", number: "01", title: "Akirah Label", meta: "Social Media · Brand · Content", location: "Bangalore", periods: ["Jun 2025 – Aug 2025", "Apr 2026 – August 2026"], tone: "cherry", imageLabel: "AKIRAH / CAMPAIGN IMAGE", intro: "Brand and content work for a premium linen label across two work periods.", role: "Brand & Content / Social Media", sections: [], sampleWork: ["Images", "Videos"], link: AKIRAH_INSTAGRAM },
