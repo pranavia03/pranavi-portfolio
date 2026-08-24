@@ -6,7 +6,7 @@ Build a website that will highlight my work experiences and portfolio.
 ## Core requirements (static)
 - Premium, contemporary, editorial-style personal portfolio for Pranavi Agarwal.
 - Warm off-white/cream background, near-black text, deep cherry/oxblood accent. Editorial serif + clean sans-serif. No SaaS look, no gradients, no glassmorphism, no em dashes.
-- Sections: Home, Selected Work (Akirah Label, Vrijesh Overseas, Visual Stories), Photography, Writing (Her Campus, Webbed Head, Substack), About, Résumé.
+- Sections: Home, Selected Work (Akirah Label, Vrijesh Overseas, Visual Stories with integrated gallery), Writing (Her Campus, Webbed Head, Substack), About, Résumé.
 - Show, don't tell. Short, natural copy. High editability via reusable data components.
 
 ## User personas
@@ -14,7 +14,7 @@ Build a website that will highlight my work experiences and portfolio.
 - Visitors: recruiters, brands, collaborators browsing work, photography, and writing.
 
 ## Architecture decisions
-- React portfolio with route-based pages for work, case studies, photography, writing, About, and résumé.
+- React portfolio with route-based pages for work, case studies, Visual Stories gallery, writing, About, and résumé. The legacy `/photography` URL redirects to `/work/visual-stories`.
 - Editorial visual system: Playfair Display, Plus Jakarta Sans, DM Mono; cream, ink, deep cherry palette.
 - All content centralized in `/app/frontend/src/portfolioData.js` for easy swapping of placeholders with real assets.
 - Existing FastAPI/MongoDB starter retained (healthcheck at /api/status); no product data API needed.
@@ -41,11 +41,13 @@ Build a website that will highlight my work experiences and portfolio.
 - 2026-08-24: Rearranged the Photography media grid around each video's native aspect ratio, using a portrait frame for Video 01 and a landscape frame for Video 02 to remove black letterboxing on desktop and mobile.
 - 2026-08-24: Rebuilt Photography as a tested uniform 4-column by 2-row editorial grid on desktop with a clean single-column mobile layout.
 - 2026-08-24: Simplified Vrijesh Overseas media sections to retain only Product Photography, removing Content Creation and Digital Assets slots.
+- 2026-08-24: Integrated the complete Photography gallery into the Home project's Visual Stories route (`/work/visual-stories`); removed Photography from desktop and mobile navigation; retained `/photography` as a redirect for old links. Full frontend regression passed in iteration 8.
 
 ## Prioritized backlog
 - P0: Replace remaining case-study placeholders with final assets once uploaded.
 - P1: Replace Akirah Sample Work and other case-study placeholders with real images, reels, videos, copy, and outcomes.
 - P2: Add optional direct links to individual featured articles when selected.
+- P2: Consolidate historical duplicate `.masonry` declarations in `App.css` to reduce future styling regression risk.
 
 ## Next tasks
 - Ask the user to upload final case-study assets.
