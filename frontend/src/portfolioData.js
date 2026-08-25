@@ -3,37 +3,91 @@ export const INSTAGRAM = "https://www.instagram.com/pranavi.agarwal/";
 export const INSTAGRAM_2 = "https://www.instagram.com/pranavi.mov/";
 export const LINKEDIN = "https://www.linkedin.com/in/pranaviagarwal/";
 export const AKIRAH_INSTAGRAM = "https://www.instagram.com/akirah.label/";
-export const PORTRAIT_URL = "https://customer-assets-m6fa6gv7.emergentagent.net/job_exp-gallery-2/artifacts/go162ebk_IMG_9489.webp";
-export const ABOUT_PORTRAIT_URL = "https://customer-assets-m6fa6gv7.emergentagent.net/job_exp-gallery-2/artifacts/bsf0xev2_IMG_2385.webp";
 export const RESUME_URL = "https://customer-assets-m6fa6gv7.emergentagent.net/job_exp-gallery-2/artifacts/ojniq3tn_Resume_Pranavi.pdf";
 
-export const photographyItems = [
-  { type: "image", label: "Peacock", src: "https://customer-assets-m6fa6gv7.emergentagent.net/job_exp-gallery-2/artifacts/59zpf2z7_IMG_3262%202.jpg", alt: "Peacock displaying its feathers" },
-  { type: "image", label: "Street Portrait", src: "https://customer-assets-m6fa6gv7.emergentagent.net/job_exp-gallery-2/artifacts/38xvlzcd_3BADC4F6-61D4-4ED0-9582-DBB7FFAB9526_1_102_a.webp", alt: "Black-and-white street portrait of a man resting among bundled packages" },
-  { type: "image", label: "Mountain Landscape", src: "https://customer-assets-m6fa6gv7.emergentagent.net/job_exp-gallery-2/artifacts/3uf76e8m_IMG_2734.webp", alt: "Layered mountain landscape at dusk" },
-  { type: "video", label: "Video 01", src: "/photography-video-01.mp4" },
-  { type: "video", label: "Video 02", src: "/photography-video-02.mp4" },
-];
-export const photographyProcess = ["Procreate", "Graphics", "Reels", "CapCut", "Edits", "Canva", "Moodboards"];
-
 export const projects = [
-  { slug: "akirah-label", number: "01", title: "Akirah Label", meta: "Social Media · Brand · Content", location: "Bangalore", periods: ["Jun 2025 – Aug 2025", "Apr 2026 – August 2026"], tone: "cherry", imageLabel: "AKIRAH / CAMPAIGN IMAGE", thumbnail: "https://static.prod-images.emergentagent.com/jobs/ecadec3a-ab66-4c3a-adb8-09a5491abec6/images/180b4f1726496c88946ce43af2771c15c75f08f743c08e72935c00eb4f295238.jpeg", thumbnailAlt: "White linen shirt hanging against a blue sky", thumbnailClass: "akirah-thumbnail", intro: "Brand and content work for a premium linen label across two work periods.", role: "Brand & Content / Social Media", sections: [], link: AKIRAH_INSTAGRAM, linkLabel: "Akirah Instagram" },
-  { slug: "vrijesh-overseas", number: "02", title: "Vrijesh Overseas", meta: "Photography · Content", location: "Bangalore · 2024", tone: "ink", imageLabel: "VRIJESH / PRODUCT IMAGE", thumbnail: "https://customer-assets-m6fa6gv7.emergentagent.net/job_exp-gallery-2/artifacts/ufqcpouh__39A6910%20%281%29.webp", thumbnailAlt: "Blue bedding styled for Vrijesh Overseas", heroImage: "https://customer-assets-m6fa6gv7.emergentagent.net/job_exp-gallery-2/artifacts/7csa7v5c__39A7108.webp", heroAlt: "Neutral striped bedding styled for Vrijesh Overseas", intro: "Photography and content support for an overseas business.", bodyCopy: "Selected product photography from bedding and home textile collections.", role: "Photography / Content", sections: ["Product Photography"], productImages: [{ src: "https://customer-assets-m6fa6gv7.emergentagent.net/job_exp-gallery-2/artifacts/3d5y74ft_IMG_5833.webp", alt: "Navy embroidered bedding detail" }, { src: "https://customer-assets-m6fa6gv7.emergentagent.net/job_exp-gallery-2/artifacts/ytr77i9f_IMG_5866.webp", alt: "White patterned bedding detail" }], link: null },
-  { slug: "visual-stories", number: "03", title: "Visual Stories", meta: "Photography · Visual Work · Short-form Content", location: "Ongoing", tone: "lilac", imageLabel: "VISUAL STORIES / VISUAL STUDY", thumbnail: "https://customer-assets-m6fa6gv7.emergentagent.net/job_exp-gallery-2/artifacts/5qo9he8h_30FDFCE2-0A0A-4536-9427-67548F3A9FD4_1_102_o.webp", thumbnailAlt: "Lion resting and looking toward the camera", thumbnailClass: "lion-thumbnail", intro: "An ongoing visual practice across portrait, place, everyday details, and short-form content.", role: "Photography / Visual Work", sections: ["Portraits", "Street", "Travel", "Lifestyle", "Short-form Content"], link: INSTAGRAM },
+  {
+    slug: "akirah-label",
+    number: "01",
+    title: "Akirah Label",
+    meta: "Social Media · Brand · Content",
+    location: "Bangalore",
+    periods: ["Jun 2025 – Aug 2025", "Apr 2026 – Aug 2026"],
+    tone: "cherry",
+    imageLabel: "AKIRAH / CAMPAIGN IMAGE",
+    intro: "Brand, social media and content work for a premium linen fashion label across two work periods.",
+    role: "Marketing & Brand Intern · Marketing & Content Intern",
+    metrics: [
+      ["180K+", "views"],
+      ["+2K", "followers"],
+      ["1 month", "to reach both"],
+    ],
+    overview: "I worked across strategy and execution: planning content calendars and launches, producing reels and campaign creative, writing social copy, and using audience and performance signals to refine what we made next.",
+    sections: [
+      { title: "Strategy", copy: "Content calendars, audience behaviour, trend research, competitor research and influencer opportunities.", label: "ADD STRATEGY / PLANNING VISUAL" },
+      { title: "Campaigns + Launches", copy: "Product launches, campaign concepts, pre-launch storytelling and launch support across social.", label: "ADD CAMPAIGN / LAUNCH WORK" },
+      { title: "Reels + Social", copy: "Short-form concepts, hooks, editing direction, copy and day-to-day content creation aligned with the brand voice.", label: "ADD REELS / SOCIAL WORK" },
+      { title: "Creative Direction", copy: "Visual storytelling, shoot ideas, product presentation and a more recognisable editorial content language.", label: "ADD CREATIVE / PHOTOGRAPHY" },
+    ],
+    link: AKIRAH_INSTAGRAM,
+    linkLabel: "Akirah Instagram",
+  },
+  {
+    slug: "vrijesh-overseas",
+    number: "02",
+    title: "Vrijesh Overseas",
+    meta: "Photography · Content · Marketing Support",
+    location: "Bangalore · 2024",
+    tone: "ink",
+    imageLabel: "VRIJESH / PRODUCT IMAGE",
+    intro: "Marketing support for a home-textile business, spanning digital asset organisation, product photography and visual content.",
+    role: "Marketing Intern",
+    metrics: [["150+", "digital assets organised"], ["Photo", "production support"], ["E-com", "visual content"]],
+    overview: "The work was practical and systems-focused: making visual assets easier to use, supporting product photography and contributing content for ongoing digital marketing needs.",
+    sections: [
+      { title: "Asset Library", copy: "Categorised and archived 150+ digital assets into a clearer library for ongoing marketing use.", label: "ADD ASSET / PROCESS VISUAL" },
+      { title: "Product Photography", copy: "Supported product photography and detail-led visual content for home-textile collections.", label: "ADD PRODUCT PHOTOGRAPHY" },
+      { title: "Digital Marketing Support", copy: "Prepared and organised visual content for e-commerce and digital marketing use.", label: "ADD DIGITAL CONTENT" },
+    ],
+  },
+  {
+    slug: "visual-stories",
+    number: "03",
+    title: "Visual Stories",
+    meta: "Photography · Visual Work · Short-form Content",
+    location: "Ongoing",
+    tone: "lilac",
+    imageLabel: "VISUAL STORIES / VISUAL STUDY",
+    intro: "An ongoing independent practice across photography, editing, short-form video and visual storytelling.",
+    role: "Independent Content Creator · Photographer & Visual Content Creator",
+    metrics: [["25K+", "Instagram views"], ["2019–", "ongoing practice"], ["Photo + video", "formats"]],
+    overview: "I use personal work as a place to experiment with framing, composition, pacing, editing and the emotional rhythm of short-form content.",
+    sections: [
+      { title: "Photography", copy: "Portraits, travel, street details and everyday visual observations.", label: "ADD PHOTOGRAPHY" },
+      { title: "Short-form Video", copy: "Concepting, shooting and editing video made for digital platforms.", label: "ADD VIDEO / REEL" },
+      { title: "Editing + Experiments", copy: "Composition, transitions, pacing, graphics, text and visual treatments across CapCut, Canva and Procreate.", label: "ADD EDIT / EXPERIMENT" },
+    ],
+    link: INSTAGRAM_2,
+    linkLabel: "@pranavi.mov",
+  },
 ];
 
 export const experience = [
-  ["Apr 2026 – August 2026", "Akirah Label", "Brand & Content / Social Media"], ["Jun 2025 – Aug 2025", "Akirah Label", "Marketing and Content Intern"], ["2024", "Vrijesh Overseas Pvt. Ltd.", "Photography & Content"], ["Ongoing", "Her Campus - Writer", "Lifestyle · Fashion · Campus Life"], ["Ongoing", "Freelance - Photography & Visual Content", "Photography · Video · Digital Work"],
+  ["Apr 2026 – Aug 2026", "Akirah Label", "Marketing & Brand Intern"],
+  ["Jun 2025 – Aug 2025", "Akirah Label", "Marketing & Content Intern"],
+  ["May 2024 – Aug 2024", "Vrijesh Overseas Pvt. Ltd.", "Marketing Intern"],
+  ["Jun 2019 – Present", "Independent Content Creator", "Photographer & Visual Content Creator"],
+  ["Feb 2025 – Present", "Her Campus UMass", "Writer"],
 ];
 
 export const articles = [
-  { title: "The Her Campus archive", publication: "Her Campus UMass", year: "2025 - Now", href: "https://www.hercampus.com/author/pranavi-agarwal/", label: "ARTICLE COVER" },
-  { title: "Psychology, made readable", publication: "Webbed Head", year: "2021 - 24", href: "https://webbedheadcom.wordpress.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAaenKmEF6uZYO6f5VascN8z0g88R-X1DzkFgj3aFBbwuFUpoEZCV9dwQSb6c7g_aem_aqelK9Ki6tVldybT4QJbzA", label: "WEBBED HEAD / ARTICLE" },
-  { title: "For longer thoughts", publication: "Substack", year: "Ongoing", href: "https://substack.com/@pranavi03?r=6tzf25&utm_medium=ios&utm_source=stories&shareImageVariant=light&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAadHkEn2zrCqBn88U1efVarJ5SibO4tt_G9PKUBA_VCYEF_8FeOY2o1zBgtGzA_aem_iJheJNeHKk_r5dB7I9TOxg&utm_id=97760_v0_s00_e0_tv3", label: "SUBSTACK / COVER" },
+  { title: "The Her Campus archive", publication: "Her Campus UMass", year: "2025 – Now", href: "https://www.hercampus.com/author/pranavi-agarwal/", label: "HER CAMPUS / COVER", description: "Fashion, lifestyle and campus culture for a college-aged audience." },
+  { title: "Psychology, made readable", publication: "Webbed Head", year: "2021 – 24", href: "https://webbedheadcom.wordpress.com/", label: "WEBBED HEAD / COVER", description: "Earlier psychology writing built around making ideas accessible without flattening them." },
+  { title: "For longer thoughts", publication: "Substack", year: "Ongoing", href: "https://substack.com/@pranavi03", label: "SUBSTACK / COVER", description: "Personal essays, poetry and longer-form writing." },
 ];
 
 export const capabilities = {
-  Marketing: ["Social Media Strategy", "Content Strategy", "Brand Storytelling", "Audience Research", "Influencer Research", "Trend Research"],
-  Creative: ["Creative Direction", "Photography", "Visual Storytelling", "Copywriting", "Short-Form Video", "Content Creation"],
-  Tools: ["Adobe Photoshop", "Canva", "CapCut", "Procreate", "Microsoft Office"],
+  Marketing: ["Content Strategy", "Brand Marketing", "Copywriting", "Influencer Research", "Trend Research"],
+  Creative: ["Content Creation", "Photography", "Short-Form Video", "Visual Storytelling"],
+  Tools: ["Adobe Photoshop", "Canva", "CapCut", "Procreate", "Microsoft Excel", "PowerPoint"],
 };
