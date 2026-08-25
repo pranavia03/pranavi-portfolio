@@ -147,6 +147,35 @@ function CaseStudy() {
   );
 }
 
+function VisualStories() {
+  const project = projects.find((item) => item.slug === "visual-stories");
+  const tiles = ["PHOTO / 01", "PHOTO / 02", "PHOTO / 03", "VIDEO / 01", "VIDEO / 02"];
+  return (
+    <>
+      <main className="inner-page wrap visual-page">
+        <div className="page-intro visual-intro">
+          <span className="eyebrow">Visual Work / 01</span>
+          <h1><em>Visual Stories</em><br />in progress.</h1>
+          <p>Portraits, street corners, travel, short-form content and the details that stay with you.</p>
+          <div className="visual-links">
+            <a className="text-link" href={INSTAGRAM} target="_blank" rel="noreferrer">@pranavi.agarwal <ArrowUpRight size={15} /></a>
+            <a className="text-link" href={INSTAGRAM_2} target="_blank" rel="noreferrer">@pranavi.mov <ArrowUpRight size={15} /></a>
+          </div>
+        </div>
+        <MetricStrip metrics={project.metrics} />
+        <div className="visual-masonry">
+          {tiles.map((tile, index) => <div className={`visual-tile visual-tile-${index + 1}`} key={tile}><Placeholder label={tile} /></div>)}
+        </div>
+        <div className="visual-process">
+          <span className="eyebrow">Process</span>
+          <p>Photography, short-form video, editing, composition, CapCut, Canva, Procreate and visual experiments.</p>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
 function Writing() {
   return (
     <>
@@ -157,7 +186,7 @@ function Writing() {
           <p>An index of pieces across fashion, lifestyle, campus culture, psychology and longer personal writing.</p>
         </div>
         <div className="article-list">
-          {articles.map((article, index) => (
+          {articles.map((article) => (
             <a className="article-row" href={article.href} target="_blank" rel="noreferrer" key={article.title}>
               <Placeholder label={article.label} />
               <div>
@@ -215,6 +244,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/writing" element={<Writing />} />
         <Route path="/about" element={<About />} />
+        <Route path="/work/visual-stories" element={<VisualStories />} />
         <Route path="/work/:slug" element={<CaseStudy />} />
         <Route path="/photography" element={<Navigate to="/work/visual-stories" replace />} />
       </Routes>
