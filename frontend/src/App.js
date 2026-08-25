@@ -3,6 +3,7 @@ import { BrowserRouter, Link, NavLink, Navigate, Route, Routes, useParams } from
 import { ArrowDown, ArrowUpRight, Menu, X } from "lucide-react";
 import { EMAIL, INSTAGRAM, INSTAGRAM_2, LINKEDIN, RESUME_URL, articles, capabilities, experience, projects } from "@/portfolioData";
 import "@/App.css";
+import "@/visualStories.css";
 
 const Placeholder = ({ label, className = "" }) => (
   <div className={`placeholder ${className}`} aria-label={label}>
