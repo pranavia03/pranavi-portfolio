@@ -1,42 +1,225 @@
 import { useState } from "react";
 import { BrowserRouter, Link, NavLink, Navigate, Route, Routes, useParams } from "react-router-dom";
 import { ArrowDown, ArrowUpRight, Menu, X } from "lucide-react";
-import { ABOUT_PORTRAIT_URL, EMAIL, INSTAGRAM, INSTAGRAM_2, LINKEDIN, PORTRAIT_URL, RESUME_URL, articles, capabilities, experience, photographyItems, photographyProcess, projects } from "@/portfolioData";
+import { EMAIL, INSTAGRAM, INSTAGRAM_2, LINKEDIN, RESUME_URL, articles, capabilities, experience, projects } from "@/portfolioData";
 import "@/App.css";
 
-const Placeholder = ({ label, wide = false }) => <div className={`placeholder ${wide ? "placeholder-wide" : ""}`} data-testid={`placeholder-${label.toLowerCase().replaceAll(" ", "-")}`}><span>◌</span><small>{label}</small></div>;
+const Placeholder = ({ label, className = "" }) => (
+  <div className={`placeholder ${className}`} aria-label={label}>
+    <span>◌</span>
+    <small>{label}</small>
+  </div>
+);
 
 function Header() {
   const [open, setOpen] = useState(false);
   const close = () => setOpen(false);
-  return <header className="site-header"><Link className="wordmark" to="/" onClick={close} data-testid="brand-home">PRANAVI <i>AGARWAL</i></Link><button className="menu-button" onClick={() => setOpen(!open)} aria-label="Toggle navigation" data-testid="mobile-menu-button">{open ? <X /> : <Menu />}</button><nav className={open ? "main-nav is-open" : "main-nav"} data-testid="main-navigation"><NavLink to="/#work" onClick={close} data-testid="nav-work">Work</NavLink><NavLink to="/writing" onClick={close} data-testid="nav-writing">Writing</NavLink><NavLink to="/about" onClick={close} data-testid="nav-about">About</NavLink><a href={RESUME_URL} target="_blank" rel="noreferrer" onClick={close} data-testid="nav-resume">Résumé ↗</a></nav></header>;
+  return (
+    <header className="site-header">
+      <Link className="wordmark" to="/" onClick={close}>PRANAVI <i>AGARWAL</i></Link>
+      <button className="menu-button" onClick={() => setOpen(!open)} aria-label="Toggle navigation">{open ? <X /> : <Menu />}</button>
+      <nav className={open ? "main-nav is-open" : "main-nav"}>
+        <a href="/#work" onClick={close}>Work</a>
+        <NavLink to="/writing" onClick={close}>Writing</NavLink>
+        <NavLink to="/about" onClick={close}>About</NavLink>
+        <a href={RESUME_URL} target="_blank" rel="noreferrer" onClick={close}>Résumé ↗</a>
+      </nav>
+    </header>
+  );
 }
 
 function Footer() {
-  return <footer className="footer"><div><span className="eyebrow">Get in touch</span><h2>LET’S TALK<span>.</span></h2><a className="footer-email" href={`mailto:${EMAIL}`} data-testid="footer-email">{EMAIL} <ArrowUpRight size={18} /></a></div><div className="footer-links"><a href={LINKEDIN} target="_blank" rel="noreferrer" data-testid="linkedin-link">LinkedIn ↗</a><a href={INSTAGRAM} target="_blank" rel="noreferrer" data-testid="instagram-link">Instagram: @pranavi.agarwal ↗</a><a href={RESUME_URL} target="_blank" rel="noreferrer" data-testid="footer-resume-link">Résumé ↓</a></div></footer>;
+  return (
+    <footer className="footer">
+      <div>
+        <span className="eyebrow">Get in touch</span>
+        <h2>LET’S TALK<span>.</span></h2>
+        <a className="footer-email" href={`mailto:${EMAIL}`}>{EMAIL} <ArrowUpRight size={18} /></a>
+      </div>
+      <div className="footer-links">
+        <a href={LINKEDIN} target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a href={INSTAGRAM} target="_blank" rel="noreferrer">Instagram: @pranavi.agarwal ↗</a>
+        <a href={INSTAGRAM_2} target="_blank" rel="noreferrer">Visuals: @pranavi.mov ↗</a>
+        <a href={RESUME_URL} target="_blank" rel="noreferrer">Résumé ↓</a>
+      </div>
+    </footer>
+  );
 }
 
 function Home() {
-  return <><main className="home"><section className="home-hero wrap" data-testid="hero-section"><div><p className="eyebrow">Marketing · Social · Brand · Visual</p><h1>PRANAVI<br /><em>AGARWAL</em></h1><p className="hero-line">Thoughtful work across marketing, branding and visual communication.</p><a className="text-link" href="#work" data-testid="selected-work-link">Selected work <ArrowDown size={15} /></a></div><div className="hero-mark"><img className="hero-portrait" src={PORTRAIT_URL} alt="Pranavi Agarwal overlooking the city" data-testid="home-portrait-image" /><span>PA / 01</span></div></section><section className="work-index wrap" id="work" data-testid="work-section"><div className="section-top"><span className="eyebrow">Selected work</span><span className="section-count">{projects.length} projects</span></div>{projects.map((project) => <Link className="project-row" to={`/work/${project.slug}`} key={project.slug} data-testid={`project-row-${project.number}`}><div className={`project-preview ${project.tone}`}>{project.thumbnail ? <img className={`project-thumbnail ${project.thumbnailClass || ""}`} src={project.thumbnail} alt={project.thumbnailAlt} loading="lazy" data-testid={`project-thumbnail-${project.number}`} /> : <Placeholder label={project.imageLabel} />}</div><div className="project-title"><span>{project.number} /</span><h2>{project.title}</h2><p>{project.meta}</p></div><span className="project-location">{project.location} <ArrowUpRight size={18} /></span></Link>)}</section><section className="home-note wrap"><span className="eyebrow">A little context</span><p>I’m Pranavi, a psychology student with an interest in marketing, visual communication, and the way people respond to brands, ideas, and content.</p><Link className="text-link" to="/about" data-testid="about-link">More about me <ArrowUpRight size={15} /></Link></section></main><Footer /></>;
+  return (
+    <>
+      <main className="home">
+        <section className="home-hero wrap">
+          <div className="hero-copy">
+            <p className="eyebrow">Marketing · Social · Brand · Visual</p>
+            <h1>PRANAVI<br /><em>AGARWAL</em></h1>
+            <p className="hero-line">Marketing, brand and visual storytelling shaped by a curiosity about how people think, respond and remember.</p>
+            <a className="text-link" href="#work">Selected work <ArrowDown size={15} /></a>
+          </div>
+          <div className="hero-mark">
+            <Placeholder label="ADD PORTRAIT" className="hero-placeholder" />
+            <span>PA / 01</span>
+          </div>
+        </section>
+
+        <section className="work-index wrap" id="work">
+          <div className="section-top">
+            <span className="eyebrow">Selected work</span>
+            <span className="section-count">{projects.length} projects</span>
+          </div>
+          {projects.map((project) => (
+            <Link className="project-row" to={`/work/${project.slug}`} key={project.slug}>
+              <div className={`project-preview ${project.tone}`}><Placeholder label={project.imageLabel} /></div>
+              <div className="project-title">
+                <span>{project.number} /</span>
+                <h2>{project.title}</h2>
+                <p>{project.meta}</p>
+              </div>
+              <span className="project-location">{project.location} <ArrowUpRight size={18} /></span>
+            </Link>
+          ))}
+        </section>
+
+        <section className="home-note wrap">
+          <span className="eyebrow">A little context</span>
+          <div>
+            <p>I’m Pranavi, a psychology student working across brand, social media, content and visual storytelling, with a particular interest in why people pay attention, connect and remember.</p>
+            <Link className="text-link" to="/about">More about me <ArrowUpRight size={15} /></Link>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+function MetricStrip({ metrics }) {
+  return (
+    <div className="metric-strip">
+      {metrics.map(([value, label]) => <div className="metric" key={`${value}-${label}`}><strong>{value}</strong><span>{label}</span></div>)}
+    </div>
+  );
 }
 
 function CaseStudy() {
   const { slug } = useParams();
   const project = projects.find((item) => item.slug === slug);
   if (!project) return <Navigate to="/#work" replace />;
-  return <><main className="case-study wrap" data-testid="case-study-page"><Link className="back-link" to="/#work" data-testid="case-study-back-link">← Selected work</Link><div className="case-heading"><span className="eyebrow">{project.number} / Case study</span><h1>{project.title}</h1><p>{project.meta}<br />{project.location}{project.periods?.map((period, index) => <span className="project-period" key={period} data-testid={`project-period-${index + 1}`}>{period}</span>)}</p>{project.link && <a className="text-link case-external-link" href={project.link} target="_blank" rel="noreferrer" data-testid="case-study-external-link">{project.linkLabel || "View related work"} <ArrowUpRight size={17} /></a>}</div><div className={`case-hero ${project.tone} ${project.heroImage ? "has-image" : ""}`}>{project.heroImage ? <img className="case-hero-image" src={project.heroImage} alt={project.heroAlt} data-testid="case-study-hero-image" /> : <Placeholder label={project.imageLabel} wide />}</div><div className="case-grid"><div><span className="eyebrow">Role</span><p className="case-role">{project.role}</p></div><div><p className="case-intro">{project.intro}</p>{project.bodyCopy && <p className="body-copy">{project.bodyCopy}</p>}</div></div>{project.sampleWork ? <div className="case-sections case-samples" data-testid="sample-work-gallery">{project.sampleWork.map((sample) => <div className="case-section" key={sample}><h2>Sample Work / {sample}</h2><Placeholder label={`ADD SAMPLE WORK ${sample.toUpperCase()}`} /></div>)}</div> : <div className={`case-sections ${project.productImages ? "product-only" : ""}`}>{project.sections.map((section, index) => <div className="case-section" key={section}><span>0{index + 1}</span><h2>{section}</h2>{project.productImages ? <div className="product-gallery" data-testid="vrijesh-product-gallery">{project.productImages.map((image, imageIndex) => <img className="product-image" src={image.src} alt={image.alt} loading="lazy" key={image.src} data-testid={`vrijesh-product-image-${imageIndex + 1}`} />)}</div> : <Placeholder label={`ADD ${section.toUpperCase()}`} />}</div>)}</div>}</main><Footer /></>;
+
+  return (
+    <>
+      <main className="case-study wrap">
+        <Link className="back-link" to="/#work">← Selected work</Link>
+        <div className="case-heading">
+          <div>
+            <span className="eyebrow">{project.number} / Case study</span>
+            <h1>{project.title}</h1>
+          </div>
+          <div className="case-meta">
+            <p>{project.meta}<br />{project.location}</p>
+            {project.periods?.map((period) => <span className="project-period" key={period}>{period}</span>)}
+            {project.link && <a className="text-link case-external-link" href={project.link} target="_blank" rel="noreferrer">{project.linkLabel} <ArrowUpRight size={16} /></a>}
+          </div>
+        </div>
+
+        <div className={`case-hero ${project.tone}`}><Placeholder label={`ADD ${project.title.toUpperCase()} HERO IMAGE`} /></div>
+        <MetricStrip metrics={project.metrics} />
+
+        <div className="case-grid">
+          <div><span className="eyebrow">Role</span><p className="case-role">{project.role}</p></div>
+          <div><p className="case-intro">{project.intro}</p><p className="body-copy">{project.overview}</p></div>
+        </div>
+
+        <div className="case-sections">
+          {project.sections.map((section, index) => (
+            <section className="case-section" key={section.title}>
+              <span>0{index + 1}</span>
+              <h2>{section.title}</h2>
+              <p>{section.copy}</p>
+              <Placeholder label={section.label} />
+            </section>
+          ))}
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
 }
 
-function VisualStories() {
-  const [selected, setSelected] = useState(null);
-  return <><main className="inner-page wrap" data-testid="visual-stories-page"><div className="page-intro"><span className="eyebrow">Visual Work / 01</span><h1><em>Visual Stories</em><br />in progress.</h1><p>Portraits, street corners, travel, short-form content, and the details that stay with you.</p><div className="ig-links"><a className="text-link" href={INSTAGRAM} target="_blank" rel="noreferrer" data-testid="visual-stories-instagram-link">@pranavi.agarwal on Instagram <ArrowUpRight size={15} /></a><a className="text-link" href={INSTAGRAM_2} target="_blank" rel="noreferrer" data-testid="visual-stories-instagram-link-2">@pranavi.mov on Instagram <ArrowUpRight size={15} /></a></div></div><div className="masonry">{photographyItems.map((item, index) => item.type === "image" ? <button className={`masonry-item media-tile item-${index + 1}`} onClick={() => setSelected(item)} key={item.src} data-testid={`photo-item-${index + 1}`} aria-label={`Expand ${item.label}`} aria-expanded={selected?.src === item.src}><img className="gallery-media" src={item.src} alt={item.alt} loading="lazy" data-testid={`visual-stories-image-${index + 1}`} /></button> : <div className={`masonry-item media-tile media-video item-${index + 1}`} key={item.src} data-testid={`video-item-${index - 2}`}><video className="gallery-media" src={item.src} controls playsInline preload="metadata" aria-label={item.label} data-testid={`visual-stories-video-${index - 2}`} /></div>)}</div><div className="experiments"><span className="eyebrow">Process</span><p>{photographyProcess.join(", ")}.</p></div></main>{selected && <div className="photo-modal" role="dialog" aria-modal="true" aria-label={`${selected.label} preview`} data-testid="photo-modal"><img className="modal-media" src={selected.src} alt={selected.alt} data-testid="photo-modal-image" /><button onClick={() => setSelected(null)} data-testid="close-photo-modal">Close ×</button></div>}<Footer /></>;
+function Writing() {
+  return (
+    <>
+      <main className="inner-page wrap">
+        <div className="page-intro writing-intro">
+          <span className="eyebrow">Writing / Archive</span>
+          <h1>Words for<br /><em>the record.</em></h1>
+          <p>An index of pieces across fashion, lifestyle, campus culture, psychology and longer personal writing.</p>
+        </div>
+        <div className="article-list">
+          {articles.map((article, index) => (
+            <a className="article-row" href={article.href} target="_blank" rel="noreferrer" key={article.title}>
+              <Placeholder label={article.label} />
+              <div>
+                <span className="eyebrow">{article.publication}</span>
+                <h2>{article.title}</h2>
+                <p>{article.description}</p>
+              </div>
+              <span>{article.year} ↗</span>
+            </a>
+          ))}
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
 }
 
-function Writing() { return <><main className="inner-page wrap" data-testid="writing-page"><div className="page-intro"><span className="eyebrow">Writing / Archive</span><h1>Words for<br /><em>the record.</em></h1><p>An index of pieces about lifestyle, fashion, campus life, and psychology.</p></div><div className="article-list">{articles.map((article, index) => <a className="article-row" href={article.href} target="_blank" rel="noreferrer" key={article.title} data-testid={`article-${index + 1}`}><Placeholder label={article.label} /><div><span className="eyebrow">{article.publication}</span><h2>{article.title}</h2></div><span>{article.year} ↗</span></a>)}</div></main><Footer /></>; }
+function About() {
+  return (
+    <>
+      <main className="inner-page about-page wrap">
+        <div className="about-intro">
+          <span className="eyebrow">About / Pranavi Agarwal</span>
+          <h1>I’m Pranavi, a psychology student working across brand, social media, content and visual storytelling, with a particular interest in why people pay attention, connect and remember.</h1>
+        </div>
 
-function About() { return <><main className="inner-page about-page wrap" data-testid="about-page"><div className="about-intro"><span className="eyebrow">About / Pranavi Agarwal</span><h1>I’m Pranavi, a psychology student interested in marketing, visual communication, and why people respond to the things they do.</h1></div><div className="about-columns"><div className="about-portrait"><img className="about-image" src={ABOUT_PORTRAIT_URL} alt="Pranavi Agarwal photographing wildlife on safari" data-testid="about-portrait-image" /></div><div><p className="lead">My work moves between social media, branding, photography, writing, and content. Psychology has made me curious about audiences: what catches attention, what creates association, and what makes something worth remembering.</p><p className="body-copy">University of Massachusetts Amherst<br />B.S. Psychology · Business Studies<br />Study abroad: Barcelona, Spain</p></div></div><div className="timeline"><span className="eyebrow">Experience</span>{experience.map((item, index) => <div className="timeline-row" key={`${item[0]}-${item[1]}`} data-testid={`timeline-${index + 1}`}><span>{item[0]}</span><strong>{item[1]}</strong><em>{item[2]}</em></div>)}</div><div className="capabilities"><span className="eyebrow">Capabilities</span>{Object.entries(capabilities).map(([group, items]) => <div className="capability-group" key={group}><h2>{group}</h2><p>{items.join(" · ")}</p></div>)}</div></main><Footer /></>; }
+        <div className="about-columns">
+          <div className="about-portrait"><Placeholder label="ADD ABOUT PORTRAIT" /></div>
+          <div>
+            <p className="lead">My work moves between strategy and making. Psychology has made me curious about audiences: what catches attention, what creates association, and what makes something worth remembering.</p>
+            <p className="body-copy">University of Massachusetts Amherst<br />B.S. Psychology · Minor in Business Studies · GPA 4.00<br />Study abroad: Universitat Autònoma de Barcelona · Spring 2026</p>
+          </div>
+        </div>
 
-function Resume() { return <main className="resume-page wrap" data-testid="resume-page"><span className="eyebrow">Résumé / 2026</span><h1>Pranavi<br /><em>Agarwal</em></h1><p>View or download the current résumé PDF. Replace the file URL in <code>portfolioData.js</code> when a new version is ready.</p><div className="resume-actions"><a className="solid-link" href={RESUME_URL} target="_blank" rel="noreferrer" data-testid="view-resume-button">View Résumé ↗</a><a className="text-link" href={RESUME_URL} download data-testid="download-resume-button">Download PDF ↓</a></div></main>; }
+        <div className="timeline">
+          <span className="eyebrow">Experience</span>
+          {experience.map((item) => <div className="timeline-row" key={`${item[0]}-${item[1]}`}><span>{item[0]}</span><strong>{item[1]}</strong><em>{item[2]}</em></div>)}
+        </div>
 
-function App() { return <BrowserRouter><Header /><Routes><Route path="/" element={<Home />} /><Route path="/work/visual-stories" element={<VisualStories />} /><Route path="/work/:slug" element={<CaseStudy />} /><Route path="/photography" element={<Navigate to="/work/visual-stories" replace />} /><Route path="/writing" element={<Writing />} /><Route path="/about" element={<About />} /><Route path="/resume" element={<Resume />} /></Routes></BrowserRouter>; }
+        <div className="capabilities">
+          <span className="eyebrow">Capabilities</span>
+          {Object.entries(capabilities).map(([group, items]) => <div className="capability-group" key={group}><h2>{group}</h2><p>{items.join(" · ")}</p></div>)}
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/writing" element={<Writing />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/work/:slug" element={<CaseStudy />} />
+        <Route path="/photography" element={<Navigate to="/work/visual-stories" replace />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
 export default App;
